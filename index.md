@@ -30,13 +30,14 @@ When you don't need the samples anymore just delete the `_posts/core-samples` fo
 
     $ rm -rf _posts/core-samples
 
-Something else
+{% highlight java %}
+public class Test{
+  def main(){
+    println("hi there");
+  }
+}
+{% endhighlight %}
 
-    $ public class Test{
-      def main(){
-        println("hi there");
-      }
-    }
 
 Here's a sample "posts list".
 
