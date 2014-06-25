@@ -30,7 +30,7 @@ When you don't need the samples anymore just delete the `_posts/core-samples` fo
 
     $ rm -rf _posts/core-samples
 
-{% highlight java %}
+{% highlight Java %}
 public class Test{
   def main(){
     println("hi there");
