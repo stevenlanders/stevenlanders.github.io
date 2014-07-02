@@ -79,7 +79,7 @@ public class AopExample{
 }
 {% endhighlight %}
 
-###4. Toss your annotation on a method.
+###4. Put your annotation on a method.
 
 {% highlight java %}
 @Controller
@@ -100,9 +100,16 @@ public class ExampleController{
 
 {% endhighlight %}
 
+In this case, I put `@LogDuration` on an API method in a Spring MVC application.
 
+###5. Try it
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+When invoked, this should print:
 
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll]:    http://jekyllrb.com
+{% highlight %}
+Hello World API: 3002ms
+{% endhighlight %}
+ 
+For more information, see the Spring AOP Documentation[spring-api]
+
+[spring-api]: http://docs.spring.io/spring/docs/3.0.x/reference/aop.html
