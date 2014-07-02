@@ -10,6 +10,7 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
+### Example Java Syntax
 {% highlight java %}
 public static void main(String[] args){
  for(int i=0; i<100; i++){
@@ -18,6 +19,7 @@ public static void main(String[] args){
 }
 {% endhighlight %}
 
+### Example Ruby Syntax
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
