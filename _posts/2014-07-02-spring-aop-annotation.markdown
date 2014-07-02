@@ -106,7 +106,7 @@ In this case, I put `@LogDuration` on an API method in a Spring MVC application.
 
 When invoked, this should print:
 
-{% highlight %}
+{% highlight bash %}
 Hello World API: 3002ms
 {% endhighlight %}
  
