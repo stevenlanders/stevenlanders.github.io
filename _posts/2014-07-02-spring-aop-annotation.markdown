@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring AOP - invoke when method has annotation"
+title:  "Spring AOP - pointcut where method has a custom annotation"
 date:   2014-07-02 23:09:25
 categories: jekyll update
 ---
