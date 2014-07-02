@@ -36,7 +36,7 @@ In this case, we're using `<aop:aspectj-autoproxy>`.
   <aop:aspectj-autoproxy/>
 
 </beans>
-{% endhightlight %}
+{% endhighlight %}
 
 ###2. Create your desired annotation
 
