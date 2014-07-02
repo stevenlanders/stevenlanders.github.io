@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring AOP - pointcut where method has a custom annotation"
 date:   2014-07-02 23:09:25
-categories: java
+categories: ['java']
 ---
 
 This is a quick example for how to run a method when any invoked method has a particular annotation.  In this example, we will log the time it takes to execute any method adorned with a `@LogDuration` annotation.  (Why log duration?  You may wish to do something else.  This is fine - just do that instead.)
