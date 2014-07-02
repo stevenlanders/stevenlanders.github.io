@@ -110,6 +110,6 @@ When invoked, this should print:
 Hello World API: 3002ms
 {% endhighlight %}
  
-For more information, see the Spring AOP Documentation[spring-api]
+For more information, see the [Spring AOP Documentation]
 
-[spring-api]: http://docs.spring.io/spring/docs/3.0.x/reference/aop.html
+[Spring AOP Documentation]: http://docs.spring.io/spring/docs/3.0.x/reference/aop.html
