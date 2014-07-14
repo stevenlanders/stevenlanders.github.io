@@ -5,9 +5,9 @@ date:   2014-07-14 14:37:25
 categories: ['interview','thoughtworks']
 ---
 
-### 1. Initial recruiter conversation
+1. Initial recruiter conversation
 
-### 2. Conversation with a tech principal
+2. Conversation with a tech principal
 
 ### 3. Code Exercise
 
