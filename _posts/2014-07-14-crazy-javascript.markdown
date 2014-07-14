@@ -81,13 +81,15 @@ if(trueStringOrOne){
 if(oneOrTrueString){
   Console.log("prints"); //prints
 }
-if(trueStringOrOne == true){
-  Console.log("does not print"); //does not print
-}
 if(oneOrTrueString == true){
   Console.log("prints"); //prints
 }
-
+if(oneOrTruString == trueStringOrOne){
+  Console.log("prints"); //prints
+}
+if(trueStringOrOne == true){
+  Console.log("does not print"); //does not print
+}
 {% endhighlight %}
 
 As I run across more, I'll keep adding them to this list.
