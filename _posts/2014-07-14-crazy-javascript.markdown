@@ -45,8 +45,8 @@ false || 0 || ""; //""
 
 ### If evaluation
 
-*If* succeeds if the expression evaluates to any string other than "", true, or 1.
-*If* fails if the expression evalutes to anything other than the above.
+`If` succeeds if the expression evaluates to any string other than "", true, or 1.
+`If` fails if the expression evalutes to anything other than the above.
 
 {% highlight javascript %}
 //if(x) is not the same as if(x==true)
@@ -89,4 +89,6 @@ if(oneOrTrueString == true){
 }
 
 {% endhighlight %}
+
+As I run across more, I'll keep adding them to this list.
 
