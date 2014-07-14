@@ -45,7 +45,8 @@ false || 0 || ""; //""
 
 ### If evaluation
 
-Sure, you can remember those.  But if you want to evaluate a result after the fact, be careful.
+*If* succeeds if the expression evaluates to any string other than "", true, or 1.
+*If* fails if the expression evalutes to anything other than the above.
 
 {% highlight javascript %}
 //if(x) is not the same as if(x==true)
@@ -64,9 +65,28 @@ var zeroOrFalse = 0 || false; //false
 if(falseOrZero || zeroOrFalse){
   Console.log("does not print"); //does not print
 }
+if(falseOrZero == false){
+  Console.log("prints"); //prints
+}
+if(zeroOrFalse == false){
+  Console.log("prints"); //prints
+}
 
-zeroOrFalse == falseOrZero; //true
-zeroOrFalse === falseOrZero; //false
+//"true" isn't true?
+var trueStringOrOne = "true" || 1;
+var oneOrTrueString = 1 || "true";
+if(trueStringOrOne){
+  Console.log("prints"); //prints
+}
+if(oneOrTrueString){
+  Console.log("prints"); //prints
+}
+if(trueStringOrOne == true){
+  Console.log("does not print"); //does not print
+}
+if(oneOrTrueString == true){
+  Console.log("prints"); //prints
+}
 
 {% endhighlight %}
 
