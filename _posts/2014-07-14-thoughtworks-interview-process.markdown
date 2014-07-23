@@ -46,5 +46,5 @@ One more interview was given to determine where I would best fit within the orga
 
 ### 8. Offer
 
-I received an offer in the following weeks, and look forwrad to joining on July 28th.  
+I received an offer in the following weeks, and look forward to joining on July 28th.  
 
