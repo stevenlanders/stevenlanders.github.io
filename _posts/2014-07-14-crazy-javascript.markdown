@@ -98,3 +98,7 @@ if(trueStringOrOne == true){
 
 As I run across more, I'll keep adding them to this list.
 
+The moral of this story is to not use `==`.  Please use `===`.  
+
+Also, some will write `if(true==condition)` for readability in lieu of `if(condition)`. If you do this in conjunction with `==`, and especially if others work on the same codebase, expect to be screwed repeatedly.
+
