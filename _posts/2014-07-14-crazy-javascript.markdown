@@ -5,7 +5,7 @@ date:   2014-07-14 14:37:25
 categories: ['javascript']
 ---
 
-This is an interesting list of things that you may want to be aware of as you write code as a crazy person.
+This is an interesting list of things that you may want to be aware of as you write code as a JavaScript developer.
 
 Most of my difficulty with this language has involved `==` and if evaluation in server-side javascript when values may or may not be set.  If you're being clever with logic expressions, it may be tempting to convert `A || B || C` to FALSE if none are true, but really it's the last entry in the list (C).  Think of the last value as an "ELSE" clause. 
 
@@ -88,7 +88,7 @@ if(oneOrTrueString){
 if(oneOrTrueString == true){
   Console.log("prints"); //prints
 }
-if(oneOrTruString == trueStringOrOne){
+if(oneOrTrueString == trueStringOrOne){
   Console.log("prints"); //prints
 }
 if(trueStringOrOne == true){
