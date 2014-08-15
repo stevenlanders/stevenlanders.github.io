@@ -25,12 +25,14 @@ You have 100 manual testers without automation skills, but with product knowledg
 4. Say farewell to automating consultants 
 
 ### Expected yields:
+
 - No need to train manual testers ($$$ savings $$$)
 - Executions will increase speed of each execution
 - Duration of QA cycle will decrease
 - Profit
 
 ### Actual yields:
+
 - Testers run scripts, some % of tests break for reasons like bad data or brittleness
 - Executions that pass are not evaluated for coverage/value, as no one can understand the scripts
 - As application changes, no one prioritizes updating the testing scripts
