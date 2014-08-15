@@ -38,7 +38,7 @@ You have 100 manual testers without automation skills, but with product knowledg
 
 It seems plausible that by having someone else write the test, you can still have these manual testers execute the test to get the benefits of automation (faster, more consistent)  After all, training your manual QA personnel in writing automated tests is too costly - so you want to avoid it right?
 
-These intuitions (reasonably) lead to this:
+### These intuitions (reasonably) lead to this:
 - An automated test will execute a test more quickly than a manual tester can *true*
 - Toyota can build cars more quickly and reliably with robots *true*
 - Faster QA executions mean that QA durations are shorter. *Yes...but now you can run it more often!*
