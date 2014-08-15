@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "QA Antipattern: Robotic Arms (automated manual QA)"
+title:  "QA Antipattern: Robotic Arms"
 date:   2014-08-05 00:00:00
 categories: ['automation','qa']
 ---
