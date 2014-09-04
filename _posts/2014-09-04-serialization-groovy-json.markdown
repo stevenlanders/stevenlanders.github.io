@@ -40,6 +40,7 @@ def testUserJson = JsonOutput.toJson(testUser)
 def outputFile = new File("testUser.json")
 outputFile.write(testUserJson)
 
+//read object from file
 def testUser2 = JsonSlurper.parse(outputFile) as User
 {% endhighlight %}
 
