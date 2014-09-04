@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Groovy: Writing objects without Serializable"
-date:   2014-08-05 00:00:00
+date:   2014-09-04 00:00:00
 categories: ['groovy','java','serialization']
 ---
 
