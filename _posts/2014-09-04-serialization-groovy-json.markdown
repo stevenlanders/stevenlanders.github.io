@@ -22,7 +22,7 @@ The Serializable interface is annoying.  It's a basic object.  Just let me read/
 
 ### JSON Proposal
 
-One solution is very straightforward.  The downside to this is that `==` is not satisfied, but you probably do not need this!
+One solution is very straightforward - don't use proper "Serialization" - because it may not actually be what you need.  The downside to this is that `==` is not satisfied, but you probably do not need this!
 
 Here's a basic example using Groovy's helpful [JsonOutput](http://groovy.codehaus.org/gapi/groovy/json/JsonOutput.html) and [JsonSlurper](http://groovy.codehaus.org/gapi/groovy/json/JsonSlurper.html) classes.
 
