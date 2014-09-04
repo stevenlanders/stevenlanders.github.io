@@ -48,6 +48,6 @@ def testUser2 = JsonSlurper.parse(outputFile) as User
 
 I added an implementation of the Grails Cache plugin that uses this approach here: [Grails Filesystem Cache Plugin](https://github.com/stevenlanders/grails-plugin-cache-filesystem)
 
-This had the added complexity of dyanmic filesnames.  Given arbitrary key types, and filename length limitations - I used *SHA256(json(key)).json* for the filename.
+This had the added complexity of dynamic file names.  Given arbitrary key types, and filename length limitations, I used *SHA256(json(key)).json* for the filename.
 
 
