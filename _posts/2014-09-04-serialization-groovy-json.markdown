@@ -9,7 +9,7 @@ categories: ['groovy','java','serialization']
 
 You want to serialize an object to a file, but it doesn't implement [Serializable](http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html).  
 
-```groovy
+```java
 class User{
     String name;
     String phone;
@@ -24,8 +24,7 @@ The Serializable interface is annoying.  It's a basic object - just let me read/
 
 Here's a basic example using Groovy's helpful [JsonOutput](http://groovy.codehaus.org/gapi/groovy/json/JsonOutput.html) and [JsonSlurper](http://groovy.codehaus.org/gapi/groovy/json/JsonSlurper.html) classes.
 
-```groovy
-
+```java
 def testUser = new User(
     name: 'steven',
     phone: '1-770-555-1212',
@@ -40,7 +39,6 @@ def outputFile = new File("testUser.json")
 outputFile.write(testUserJson)
 
 def testUser2 = JsonSlurper.parse(outputFile) as User
-
 ```
 
 
