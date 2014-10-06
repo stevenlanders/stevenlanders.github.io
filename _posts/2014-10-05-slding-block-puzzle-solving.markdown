@@ -48,7 +48,7 @@ Notes:
 5. Unlock both values
 6. Sweep both values into place via the second-to last spot (moves: right,down).  Lock the row.
 
-````groovy
+{% highlight groovy %}
 
 private def solveRow(def edge){
         //solve all spots except last two entries
@@ -82,7 +82,7 @@ private def solveRow(def edge){
         lockedSpots.clear()
     }
     
-````
+{% endhighlight %}
 
 (The column algorithm is the same, except rotated vertically)
 
@@ -93,7 +93,7 @@ private def solveRow(def edge){
 
 High-Level Algorithm to move a target value `val` to (x,y).
 
-````groovy
+{% highlight groovy %}
 
     private def moveValToSpot(def val, x, y){
         def location = findVal(val)
@@ -103,13 +103,13 @@ High-Level Algorithm to move a target value `val` to (x,y).
         }
     }
     
-````
+{% endhighlight %}
 
 `moveVal(val, moveName)` essentially moves a target value in a particular direction.  It locks the spot to avoid passing over it.
 
 Take note of the `DELTA_MAP` which knows where the empty space should be to execute an operation.  For instance, to move something *up*, the empty space has to be ABOVE the target value, then MOVE DOWN.
 
-````groovy
+{% highlight groovy %}
 
     static def DELTA_MAP = [
                 up : [delta: [-1, 0], opposite: DIRECTION_DOWN],
@@ -128,12 +128,14 @@ Take note of the `DELTA_MAP` which knows where the empty space should be to exec
         unlockSpot(x,y)
         if(possible) move(delta.opposite)
     }
-````
+{% endhighlight %}
 
 Goto is implemented as finding the path between two spots, and moving there.
 
 Note: This is different from `moveValToSpot` because it is an operation on the empty space itself.
-````groovy
+
+{% highlight groovy %}
+
     private def gotoSpot(x,y){
         if(x == emptyX() && y == emptyY()){ return true; }
         def path = findNodePath(emptyX(), emptyY(), x, y)
@@ -145,7 +147,7 @@ Note: This is different from `moveValToSpot` because it is an operation on the e
         }
         return true;
     }
-````
+{% endhighlight %}
 
 ### Even Yet Deeper: To find a path between two spots (x1,y1) to (x2,y2):
 
@@ -162,7 +164,8 @@ To find path from (x1,y1) to (x2,y2), while avoiding obstacles
 
 Algorithm in groovy:
 
-````groovy
+{% highlight groovy %}
+
     private def getPath(x1, y1, x2, y2, currentPath){
         if([x1,y1] == [x2, y2]){
             return currentPath //SUCCESS
@@ -185,17 +188,17 @@ Algorithm in groovy:
             }
         }
     }
-````
+{% endhighlight %}
 
 Distance calculation (Remember from Algebra?):
-````groovy
+{% highlight groovy %}
     private static def getDistance(x1, y1, x2, y2){
             Math.sqrt(Math.pow((y2-y1),2) + Math.pow((x2-x1),2))
     }
-````
+{% endhighlight %}
 
 Eligible values next to (x,y) (I thought this was cool):
-````groovy
+{% highlight groovy %}
     private def getAdjacentNodes(x,y){
            [ [spot: [x, y+1], moveName: DIRECTION_RIGHT, move: {right()}],
              [spot: [x, y-1], moveName: DIRECTION_LEFT, move: {left()}],
@@ -204,11 +207,11 @@ Eligible values next to (x,y) (I thought this was cool):
                isLegalLocation(it.spot[X], it.spot[Y])
            }
     }
-````
+{% endhighlight %}
 
 Is legal location is defined as "on the board" AND "not locked"
 (It's strucutred this way for readability...but I could be talked out of it)
-````groovy
+{% highlight groovy %}
     private def isLegalLocation(x,y){
             if(lockedRows.contains(x) || lockedColumns.contains(y)){
                 return false;
@@ -224,7 +227,7 @@ Is legal location is defined as "on the board" AND "not locked"
             }
             return true
         }
-````
+{% endhighlight %}
 
 ###Get the source code, if you're interested in trying it out:
 [Get the Source](https://github.com/stevenlanders/block-puzzle-solver)
