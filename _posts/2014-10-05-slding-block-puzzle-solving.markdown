@@ -28,6 +28,7 @@ Notes:
 6. Optimize: Remove every no-op move pairs: (up,down), (down,up), (left,right), (right,left)
 
 ````groovy
+
     def solve(){
         (0..(edgeSize-3)).each{cornerIndex->
             solveEdges(cornerIndex)
@@ -36,6 +37,7 @@ Notes:
         optimizeMoves()
         return this;
     }
+    
 ````
 
 ### Deeper: To solve a row:
@@ -47,6 +49,7 @@ Notes:
 6. Sweep both values into place via the second-to last spot (moves: right,down).  Lock the row.
 
 ````groovy
+
 private def solveRow(def edge){
         //solve all spots except last two entries
         (edge..edgeSize-3).each{col->
@@ -78,6 +81,7 @@ private def solveRow(def edge){
         lockedRows.add(edge)
         lockedSpots.clear()
     }
+    
 ````
 
 (The column algorithm is the same, except rotated vertically)
@@ -88,7 +92,9 @@ private def solveRow(def edge){
 3. Execute that set of moves *against* the target value (e.g., `up` means "move the empty space above the value, then move down")
 
 High-Level Algorithm to move a target value `val` to (x,y).
+
 ````groovy
+
     private def moveValToSpot(def val, x, y){
         def location = findVal(val)
         def path = findNodePath(location[X], location[Y], x, y);
@@ -96,6 +102,7 @@ High-Level Algorithm to move a target value `val` to (x,y).
             moveVal(val, node.moveName)
         }
     }
+    
 ````
 
 `moveVal(val, moveName)` essentially moves a target value in a particular direction.  It locks the spot to avoid passing over it.
@@ -103,6 +110,7 @@ High-Level Algorithm to move a target value `val` to (x,y).
 Take note of the `DELTA_MAP` which knows where the empty space should be to execute an operation.  For instance, to move something *up*, the empty space has to be ABOVE the target value, then MOVE DOWN.
 
 ````groovy
+
     static def DELTA_MAP = [
                 up : [delta: [-1, 0], opposite: DIRECTION_DOWN],
                 down : [delta: [1, 0], opposite: DIRECTION_UP],
