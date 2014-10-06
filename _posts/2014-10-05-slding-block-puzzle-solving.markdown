@@ -41,7 +41,7 @@ Notes:
     
 {% endhighlight %}
 
-### Deeper: To solve a row:
+### To solve a row:
 1. For each number except the last two in the row, move the target value into its spot and lock it
 2. Move the *last* value in this row to the bottom right spot in the board
 3. Stage the *second to last* value in the *last* spot in the row and lock it.
@@ -87,7 +87,7 @@ private def solveRow(def edge){
 
 (The column algorithm is the same, except rotated vertically)
 
-### Yet Deeper: To move a target value from it's current location (A) to a particular spot (B):
+### To move a target value from it's current location to a particular spot (x,y):
 1. Find the location of the value on the board
 2. Find the path between its location and the target location (x,y) as a set of nodes with moves (e.g, `up`, `down`, `left`, `right`)
 3. Execute that set of moves *against* the target value (e.g., `up` means "move the empty space above the value, then move down")
