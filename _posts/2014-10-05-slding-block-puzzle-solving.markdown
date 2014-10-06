@@ -156,6 +156,7 @@ This is a recursive algorithm for finding the path between two spots.  The resul
 This algorithm is used for two purposes: moving a target value from A to B, and also moving the empty space around the board (to accomplish the former).
 
 To find path from (x1,y1) to (x2,y2), while avoiding obstacles
+
 1. If already at the target spot, return the current path (YAY!)
 2. Otherwise, find all *eligible next spots* that from (x1,y1) that have *NOT* been visited before and SORT this list by distance to the TARGET spot (closest first)
 3. For each move, put this move in a copy of the 'current path', and try to calculate the path from this node to the TARGET (x2,y2).
