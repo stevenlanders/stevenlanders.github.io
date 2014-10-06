@@ -27,7 +27,7 @@ Notes:
 5. Crunch Last Square: Solve last 3 tiles: until solved, or too many attempts are made, move empty space clockwise: left,up,right,down
 6. Optimize: Remove every no-op move pairs: (up,down), (down,up), (left,right), (right,left)
 
-````groovy
+{% highlight groovy %}
 
     def solve(){
         (0..(edgeSize-3)).each{cornerIndex->
@@ -38,7 +38,7 @@ Notes:
         return this;
     }
     
-````
+{% endhighlight %}
 
 ### Deeper: To solve a row:
 1. For each number except the last two in the row, move the target value into its spot and lock it
