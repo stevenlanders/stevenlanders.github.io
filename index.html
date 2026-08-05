@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+<script>document.documentElement.className = 'js';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Steven Landers — Principal Engineer</title>
@@ -72,6 +73,45 @@
     color: var(--faint);
     margin-bottom: 1.5rem;
   }
+
+  .h2row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .h2row h2 { margin-bottom: 0; }
+  .tabs {
+    display: inline-flex;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.15rem;
+  }
+  .tabs button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .tabs button[aria-selected="true"] {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .no-js .tabs { display: none; }
+  .js .panel-title { display: none; }
+  .panel-title {
+    font-size: 0.9375rem;
+    color: var(--faint);
+    margin-bottom: 1.25rem;
+  }
+  .no-js .panel + .panel { margin-top: 2.5rem; }
 
   .highlight { margin-bottom: 1.9rem; }
   .highlight:last-child { margin-bottom: 0; }
@@ -149,18 +189,46 @@
   </header>
 
   <section id="highlights">
-    <h2>Highlights</h2>
-    <div class="highlight">
-      <h3>Sei Giga <span class="stat">— designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
-      <p>I led the design, prototyping, and rollout of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and lead the five-engineer consensus and execution team delivering it incrementally to mainnet.</p>
+    <div class="h2row">
+      <h2>Highlights</h2>
+      <div class="tabs" role="tablist" aria-label="Highlight focus">
+        <button type="button" role="tab" id="tab-technical" aria-selected="true" aria-controls="panel-technical">Technical</button>
+        <button type="button" role="tab" id="tab-leadership" aria-selected="false" aria-controls="panel-leadership">Leadership</button>
+      </div>
     </div>
-    <div class="highlight">
-      <h3>First parallelized EVM in the Sei ecosystem</h3>
-      <p>I designed and implemented Block-STM parallel transaction execution on Sei's Cosmos-based EVM — deterministic state-conflict detection with a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
+    <div id="panel-technical" class="panel" role="tabpanel" aria-labelledby="tab-technical">
+      <h3 class="panel-title">Technical</h3>
+      <div class="highlight">
+        <h3>Sei Giga <span class="stat">— designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
+        <p>I led the design, prototyping, and rollout of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and lead the five-engineer consensus and execution team delivering it incrementally to mainnet.</p>
+      </div>
+      <div class="highlight">
+        <h3>First parallelized EVM in the Sei ecosystem</h3>
+        <p>I designed and implemented Block-STM parallel transaction execution on Sei's Cosmos-based EVM — deterministic state-conflict detection with a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
+      </div>
+      <div class="highlight">
+        <h3>Forta <span class="stat">— laptop prototype to ~12,000 nodes, $23M a16z raise</span></h3>
+        <p>As principal architect and technical leader, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
+      </div>
     </div>
-    <div class="highlight">
-      <h3>Forta <span class="stat">— laptop prototype to ~12,000 nodes, $23M a16z raise</span></h3>
-      <p>As principal architect and technical leader, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
+    <div id="panel-leadership" class="panel" role="tabpanel" aria-labelledby="tab-leadership">
+      <h3 class="panel-title">Leadership</h3>
+      <div class="highlight">
+        <h3>Forta <span class="stat">— Director of Development / CTO</span></h3>
+        <p>I led a nine-engineer team — architecture, technical design reviews, roadmaps, one-on-ones, and performance reviews — as Forta grew from a laptop prototype to a ~12,000-node network backed by a $23 million a16z raise.</p>
+      </div>
+      <div class="highlight">
+        <h3>Vocalocity / Vonage <span class="stat">— teams of up to 21</span></h3>
+        <p>Promoted from Software Engineer through Development Manager and Director of Development to Director of Software Architecture, coordinating distributed teams in Atlanta, New Jersey, and Tel Aviv before and after the Vonage acquisition.</p>
+      </div>
+      <div class="highlight">
+        <h3>Sei Labs <span class="stat">— consensus &amp; execution team</span></h3>
+        <p>I lead the five-engineer team delivering Sei Giga incrementally to mainnet, combining organization-wide architectural leadership with hands-on implementation.</p>
+      </div>
+      <div class="highlight">
+        <h3>Engineering &amp; business <span class="stat">— MBA</span></h3>
+        <p>An MBA on top of a computer-science foundation — I'm at home where technical strategy meets regulatory, operational, and business constraints.</p>
+      </div>
     </div>
   </section>
 
@@ -217,6 +285,11 @@
     </div>
   </section>
 
+  <section id="education">
+    <h2>Education</h2>
+    <p>MBA, University of Georgia (2012) &nbsp;·&nbsp; BS in Computer Science, University of Georgia (2005)</p>
+  </section>
+
   <section id="publications">
     <h2>Publications</h2>
     <ul class="pubs">
@@ -242,5 +315,17 @@
 
   <footer>Steven Landers · Milton, Georgia · Remote</footer>
 </main>
+<script>
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs [role="tab"]'));
+  function select(tab) {
+    tabs.forEach(function (t) {
+      var selected = t === tab;
+      t.setAttribute('aria-selected', String(selected));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+    });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { select(t); }); });
+  select(document.getElementById('tab-technical'));
+</script>
 </body>
 </html>
