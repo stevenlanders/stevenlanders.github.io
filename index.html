@@ -1,20 +1,250 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steven Landers — Principal Engineer</title>
+<meta name="description" content="Steven Landers is a principal-level engineer working on distributed systems, financial-market infrastructure, and security — consensus protocols, parallel execution, and exchange infrastructure at Sei Labs.">
+<meta property="og:title" content="Steven Landers — Principal Engineer">
+<meta property="og:description" content="Distributed systems, financial-market infrastructure, and security. Consensus protocols, parallel execution, and exchange infrastructure at Sei Labs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.stevenlanders.com/">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1d21;
+    --muted: #5c6570;
+    --faint: #8a929c;
+    --rule: #e4e7ea;
+    --accent: #1f5aa8;
+    --stat: #14181d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --text: #e4e7ea;
+      --muted: #9aa4ae;
+      --faint: #6e7883;
+      --rule: #2a2f35;
+      --accent: #7aaee6;
+      --stat: #f2f4f6;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-<div class="home">
+  header h1 {
+    font-size: 2rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .tagline {
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 1.0625rem;
+  }
+  .intro {
+    margin-top: 1.75rem;
+    max-width: 42rem;
+  }
 
-  <h1>Posts</h1>
+  section { margin-top: 3.5rem; }
+  h2 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 1.5rem;
+  }
 
-  <ul class="posts">
-    {% for post in site.posts %}
+  .highlight { margin-bottom: 1.9rem; }
+  .highlight:last-child { margin-bottom: 0; }
+  .highlight h3 {
+    font-size: 1.0625rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .highlight .stat {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .highlight p {
+    margin-top: 0.35rem;
+    color: var(--muted);
+    max-width: 42rem;
+  }
+
+  .role {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.25rem 1.25rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .role:last-child { border-bottom: 1px solid var(--rule); }
+  .role .years {
+    color: var(--faint);
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.15rem;
+    white-space: nowrap;
+  }
+  .role .what strong { font-weight: 650; }
+  .role .what .title { color: var(--muted); }
+  .role .what .desc {
+    color: var(--muted);
+    font-size: 0.9375rem;
+    margin-top: 0.1rem;
+  }
+  @media (max-width: 34rem) {
+    main { padding-top: 3.5rem; }
+    .role { grid-template-columns: 1fr; gap: 0.1rem; }
+    .role .years { padding-top: 0; }
+  }
+
+  .pubs li { list-style: none; margin-bottom: 0.9rem; }
+  .pubs li:last-child { margin-bottom: 0; }
+  .pubs .where { color: var(--faint); font-size: 0.9375rem; }
+
+  .contact ul { list-style: none; }
+  .contact li { margin-bottom: 0.4rem; }
+  .contact .label {
+    display: inline-block;
+    width: 5.5rem;
+    color: var(--faint);
+    font-size: 0.9375rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--faint);
+    font-size: 0.875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Steven Landers</h1>
+    <p class="tagline">Principal Engineer — distributed systems, financial-market infrastructure, security</p>
+    <p class="intro">I'm a principal-level engineer with 20 years of experience building distributed, security-sensitive systems — consensus protocols, parallel execution engines, fraud detection, and regulated financial infrastructure. At Sei Labs I lead consensus and exchange-platform work; before that I helped grow Forta from a laptop prototype into a 12,000-node decentralized security network.</p>
+  </header>
+
+  <section id="highlights">
+    <h2>Highlights</h2>
+    <div class="highlight">
+      <h3>Sei Giga <span class="stat">— designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
+      <p>I led the design, prototyping, and rollout of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and lead the five-engineer consensus and execution team delivering it incrementally to mainnet.</p>
+    </div>
+    <div class="highlight">
+      <h3>First parallelized EVM in the Sei ecosystem</h3>
+      <p>I designed and implemented Block-STM parallel transaction execution on Sei's Cosmos-based EVM — deterministic state-conflict detection with a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
+    </div>
+    <div class="highlight">
+      <h3>Forta <span class="stat">— laptop prototype to ~12,000 nodes, $23M a16z raise</span></h3>
+      <p>As principal architect and technical leader, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
+    </div>
+    <div class="highlight">
+      <h3>Regulated exchange infrastructure</h3>
+      <p>I lead hands-on development of a centralized exchange platform being prepared to support Designated Contract Market and Futures Commission Merchant license applications — trading systems, market operations, security controls, and production readiness.</p>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2>Career</h2>
+    <div class="role">
+      <div class="years">2023–Present</div>
+      <div class="what">
+        <strong>Sei Labs</strong> <span class="title">· L7 Engineer (Manager)</span>
+        <div class="desc">Multi-proposer consensus, parallelized EVM, and centralized exchange infrastructure.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2020–2023</div>
+      <div class="what">
+        <strong>OpenZeppelin / Forta</strong> <span class="title">· Director of Development / CTO, Forta</span>
+        <div class="desc">Principal architect for the Forta network and the Defender DevSecOps platform.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2019–2020</div>
+      <div class="what">
+        <strong>Bishop Fox</strong> <span class="title">· Principal Engineer &amp; Software Manager</span>
+        <div class="desc">Continuous attack-surface and vulnerability-detection platform for Fortune 500 customers.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2017–2019</div>
+      <div class="what">
+        <strong>Netvote</strong> <span class="title">· Co-Founder &amp; Technical Director (side venture)</span>
+        <div class="desc">Anonymous, tamper-resistant voting platform built on Ethereum; delivered production elections.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2016–2019</div>
+      <div class="what">
+        <strong>Pindrop</strong> <span class="title">· Software Architect</span>
+        <div class="desc">Fraud-detection and authentication systems for major banks and enterprise call centers.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2010–2016</div>
+      <div class="what">
+        <strong>Vocalocity / Vonage</strong> <span class="title">· Director of Software Architecture</span>
+        <div class="desc">Scaled a business communications platform through acquisition; led teams of up to 21.</div>
+      </div>
+    </div>
+    <div class="role">
+      <div class="years">2006–2010</div>
+      <div class="what">
+        <strong>CGI Group</strong> <span class="title">· Consultant</span>
+        <div class="desc">Production telecommunications, billing, portal, and set-top-box systems.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul class="pubs">
       <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="https://arxiv.org/abs/2505.14914">Sei Giga: Multi-Proposer Blockchain</a>
+        <div class="where">arxiv.org/abs/2505.14914</div>
       </li>
-    {% endfor %}
-  </ul>
+      <li>
+        <a href="https://arxiv.org/abs/2511.13080">MEV in Multi-Proposer Blockchains</a>
+        <div class="where">arxiv.org/abs/2511.13080</div>
+      </li>
+    </ul>
+  </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li><span class="label">Email</span> <a href="mailto:steven.landers@gmail.com">steven.landers@gmail.com</a></li>
+      <li><span class="label">GitHub</span> <a href="https://github.com/stevenlanders">github.com/stevenlanders</a></li>
+      <li><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/stevenglanders">linkedin.com/in/stevenglanders</a></li>
+    </ul>
+  </section>
 
-</div>
+  <footer>Steven Landers · Milton, Georgia · Remote</footer>
+</main>
+</body>
+</html>
