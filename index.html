@@ -53,6 +53,9 @@
     letter-spacing: -0.02em;
     line-height: 1.2;
   }
+  .ident { display: flex; align-items: center; gap: 1.25rem; }
+  .avatar { width: 5.5rem; height: 5.5rem; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid var(--rule); }
+  @media (max-width: 34rem) { .ident { gap: 1rem; } .avatar { width: 4.5rem; height: 4.5rem; } }
   .tagline {
     margin-top: 0.5rem;
     color: var(--muted);
@@ -171,8 +174,13 @@
 <body>
 <main>
   <header>
+    <div class="ident">
+      <img class="avatar" src="avatar.jpg" width="88" height="88" alt="Steven Landers">
+      <div>
     <h1>Steven Landers</h1>
-    <p class="tagline">Engineering executive · AI-native technical leader · distributed systems and security</p>
+        <p class="tagline">Engineering executive · AI-native technical leader · distributed systems and security</p>
+      </div>
+    </div>
     <p class="intro">I am an engineering leader with 20 years of experience building distributed, security-sensitive systems and leading the teams behind them. I have led teams of up to 21 engineers, served as CTO of Forta, a security network backed by $23 million from a16z, and designed consensus protocols, parallel execution engines, and fraud-detection systems. I currently manage the Consensus &amp; Execution team at Sei Labs, where I led the transition to agentic development.</p>
     <div class="stats">
       <div><span class="num">20 yrs</span><span class="lbl">building and leading engineering teams</span></div>
