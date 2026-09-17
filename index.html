@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Steven Landers · Engineering Executive</title>
-<meta name="description" content="Steven Landers is an engineering executive and hands-on architect. Former CTO of Forta, manager of the Consensus and Execution team at Sei Labs, and an AI-native builder of distributed systems and security platforms.">
+<meta name="description" content="Steven Landers is an engineering executive and architect. Former CTO of Forta, manager of the Consensus and Execution team at Sei Labs. Distributed systems, security, and agentic development.">
 <meta property="og:title" content="Steven Landers · Engineering Executive">
-<meta property="og:description" content="Engineering executive and hands-on architect. Leadership at team and company scale, technical depth in distributed systems and security, and an AI-native way of building.">
+<meta property="og:description" content="Engineering executive and architect. Former CTO of Forta, manager of the Consensus and Execution team at Sei Labs. Distributed systems, security, and agentic development.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stevenlanders.com/">
 <style>
@@ -100,11 +100,6 @@
   @media (max-width: 34rem) {
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
-  .lede {
-    margin: -0.75rem 0 1.5rem;
-    color: var(--text);
-    max-width: 42rem;
-  }
 
   .highlight { margin-bottom: 1.9rem; }
   .highlight:last-child { margin-bottom: 0; }
@@ -178,7 +173,7 @@
   <header>
     <h1>Steven Landers</h1>
     <p class="tagline">Engineering executive · AI-native technical leader · distributed systems and security</p>
-    <p class="intro">I'm an engineering leader who still builds. Over 20 years I've led teams of up to 21, served as CTO of Forta through a $23 million a16z raise, and personally designed consensus protocols, parallel execution engines, and fraud-detection systems. Today I manage the Consensus &amp; Execution team at Sei Labs, where I led the transition to agentic development, now my primary way of building software.</p>
+    <p class="intro">Over 20 years I've led engineering teams of up to 21, served as CTO of Forta through a $23 million a16z raise, and designed consensus protocols, parallel execution engines, and fraud-detection systems. I manage the Consensus &amp; Execution team at Sei Labs, where I led the transition to agentic development, now my primary way of building software.</p>
     <div class="stats">
       <div><span class="num">20 yrs</span><span class="lbl">building and leading engineering teams</span></div>
       <div><span class="num">21</span><span class="lbl">engineers and UX on the largest team I led</span></div>
@@ -189,7 +184,10 @@
 
   <section id="leadership">
     <h2>Leadership</h2>
-    <p class="lede">I've led engineering at team, director, and CTO scope, and I'm ready to run an engineering organization.</p>
+    <div class="highlight">
+      <h3>Sei Labs <span class="stat">· manager, Consensus &amp; Execution team</span></h3>
+      <p>I manage the five-engineer Consensus &amp; Execution team delivering Sei Giga incrementally to mainnet, and I led the transition to agentic, spec-driven development.</p>
+    </div>
     <div class="highlight">
       <h3>Forta <span class="stat">· Director of Development / CTO</span></h3>
       <p>I led the nine-engineer team behind Forta as it grew from a laptop prototype to a ~12,000-node network backed by a $23 million a16z raise, owning architecture, technical design reviews, roadmaps, one-on-ones, and performance reviews.</p>
@@ -199,18 +197,13 @@
       <p>I was promoted from Software Engineer through Development Manager and Director of Development to Director of Software Architecture, coordinating distributed teams in Atlanta, New Jersey, and Tel Aviv before and after the Vonage acquisition.</p>
     </div>
     <div class="highlight">
-      <h3>Sei Labs <span class="stat">· manager, Consensus &amp; Execution team</span></h3>
-      <p>I manage the five-engineer Consensus &amp; Execution team delivering Sei Giga incrementally to mainnet, combining organization-wide architectural leadership with hands-on implementation. I also led the transition to agentic, spec-driven development.</p>
-    </div>
-    <div class="highlight">
       <h3>Engineering &amp; business <span class="stat">· MBA</span></h3>
-      <p>An MBA on top of a computer-science foundation. I'm at home where technical strategy meets regulatory, operational, and business constraints, and at Pindrop I delivered recurring architectural briefings to engineering, sales, and executive audiences.</p>
+      <p>I hold an MBA alongside a computer-science degree. At Pindrop I delivered recurring architectural briefings to engineering, sales, and executive audiences.</p>
     </div>
   </section>
 
   <section id="technical">
     <h2>Technical depth</h2>
-    <p class="lede">I still design and ship the hard parts myself: consensus, execution, security, and systems under adversarial load.</p>
     <div class="highlight">
       <h3>Sei Giga <span class="stat">· designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
       <p>I led the design and prototyping of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and contributed to the published research behind it.</p>
@@ -220,33 +213,16 @@
       <p>I designed and implemented Block-STM parallel transaction execution for Sei, the first parallelized EVM, with deterministic state-conflict detection and a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
     </div>
     <div class="highlight">
+      <h3>Spec-driven agentic development <span class="stat">· my primary way of building</span></h3>
+      <p>We maintain high-level, machine-readable specs: message formats, disaster-recovery and high-availability characteristics, and what each component owns and does not own. Custom agent skills render the specs, generate code from them, and turn spec changes into pull requests, backed by automated validation. I keep direct ownership of architecture, security, code review, and production deployment.</p>
+    </div>
+    <div class="highlight">
       <h3>Forta <span class="stat">· laptop prototype to ~12,000 nodes</span></h3>
       <p>As principal architect, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
     </div>
     <div class="highlight">
       <h3>Fraud detection at Pindrop <span class="stat">· toward ~3 billion calls per year</span></h3>
       <p>I architected fraud-detection and authentication systems used by major banks, including real-time detection, model management, and machine-learning processing pipelines.</p>
-    </div>
-  </section>
-
-  <section id="ai-native">
-    <h2>AI-native engineering</h2>
-    <p class="lede">I led the AI transition at Sei Labs. Agentic development is now my primary way of building software, not an add-on.</p>
-    <div class="highlight">
-      <h3>Spec-driven development</h3>
-      <p>We work at the level of high-level, machine-readable specs: message formats, disaster-recovery and high-availability characteristics, what each component owns and does not own. Custom agent skills render those specs, generate code from them, and turn spec changes into pull requests.</p>
-    </div>
-    <div class="highlight">
-      <h3>Agents across the lifecycle</h3>
-      <p>I design task-specific agent workflows that decompose features, generate and modify production code, run tests, investigate failures, and iterate across the codebase.</p>
-    </div>
-    <div class="highlight">
-      <h3>Knowledge as infrastructure</h3>
-      <p>I encode architecture, coding standards, operational procedures, and domain knowledge in reusable skills, repository-level instructions, and guardrails, backed by automated validation.</p>
-    </div>
-    <div class="highlight">
-      <h3>Accountability stays human</h3>
-      <p>I keep direct ownership of architecture, security, testing, code review, and production deployment.</p>
     </div>
   </section>
 
