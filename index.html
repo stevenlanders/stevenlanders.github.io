@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-<script>document.documentElement.className = 'js';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Steven Landers · Principal Engineer</title>
-<meta name="description" content="Steven Landers is a principal-level engineer working on distributed systems, financial-market infrastructure, and security. Consensus protocols and parallel execution at Sei Labs.">
-<meta property="og:title" content="Steven Landers · Principal Engineer">
-<meta property="og:description" content="Distributed systems, financial-market infrastructure, and security. Consensus protocols and parallel execution at Sei Labs.">
+<title>Steven Landers · Engineering Executive</title>
+<meta name="description" content="Steven Landers is an engineering executive and hands-on architect. Former CTO of Forta, manager of the Consensus and Execution team at Sei Labs, and an AI-native builder of distributed systems and security platforms.">
+<meta property="og:title" content="Steven Landers · Engineering Executive">
+<meta property="og:description" content="Engineering executive and hands-on architect. Leadership at team and company scale, technical depth in distributed systems and security, and an AI-native way of building.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stevenlanders.com/">
 <style>
@@ -74,44 +73,38 @@
     margin-bottom: 1.5rem;
   }
 
-  .h2row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
   }
-  .h2row h2 { margin-bottom: 0; }
-  .tabs {
-    display: inline-flex;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    padding: 0.15rem;
+  .stats .num {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    color: var(--stat);
+    line-height: 1.2;
   }
-  .tabs button {
-    appearance: none;
-    border: 0;
-    background: transparent;
+  .stats .lbl {
+    display: block;
+    margin-top: 0.2rem;
     color: var(--muted);
-    font: inherit;
     font-size: 0.875rem;
-    padding: 0.25rem 0.85rem;
-    border-radius: 999px;
-    cursor: pointer;
+    line-height: 1.4;
   }
-  .tabs button[aria-selected="true"] {
-    background: var(--accent);
-    color: var(--bg);
+  @media (max-width: 34rem) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
   }
-  .no-js .tabs { display: none; }
-  .js .panel-title { display: none; }
-  .panel-title {
-    font-size: 0.9375rem;
-    color: var(--faint);
-    margin-bottom: 1.25rem;
+  .lede {
+    margin: -0.75rem 0 1.5rem;
+    color: var(--text);
+    max-width: 42rem;
   }
-  .no-js .panel + .panel { margin-top: 2.5rem; }
 
   .highlight { margin-bottom: 1.9rem; }
   .highlight:last-child { margin-bottom: 0; }
@@ -184,51 +177,76 @@
 <main>
   <header>
     <h1>Steven Landers</h1>
-    <p class="tagline">Principal Engineer · distributed systems, financial-market infrastructure, security</p>
-    <p class="intro">I'm a principal-level engineer with 20 years of experience building distributed, security-sensitive systems: consensus protocols, parallel execution engines, fraud detection, and regulated financial infrastructure. At Sei Labs I lead consensus and execution work; before that I helped grow Forta from a laptop prototype into a 12,000-node decentralized security network.</p>
+    <p class="tagline">Engineering executive · AI-native technical leader · distributed systems and security</p>
+    <p class="intro">I'm an engineering leader who still builds. Over 20 years I've led teams of up to 21, served as CTO of Forta through a $23 million a16z raise, and personally designed consensus protocols, parallel execution engines, and fraud-detection systems. Today I manage the Consensus &amp; Execution team at Sei Labs, where I led the transition to agentic development with Claude, now my primary way of building software.</p>
+    <div class="stats">
+      <div><span class="num">20 yrs</span><span class="lbl">building and leading engineering teams</span></div>
+      <div><span class="num">21</span><span class="lbl">engineers and UX on the largest team I led</span></div>
+      <div><span class="num">$23M</span><span class="lbl">a16z raise for Forta while I was CTO</span></div>
+      <div><span class="num">~200k TPS</span><span class="lbl">design target for Sei Giga consensus</span></div>
+    </div>
   </header>
 
-  <section id="highlights">
-    <div class="h2row">
-      <h2>Highlights</h2>
-      <div class="tabs" role="tablist" aria-label="Highlight focus">
-        <button type="button" role="tab" id="tab-technical" aria-selected="true" aria-controls="panel-technical">Technical</button>
-        <button type="button" role="tab" id="tab-leadership" aria-selected="false" aria-controls="panel-leadership">Leadership</button>
-      </div>
+  <section id="leadership">
+    <h2>Leadership</h2>
+    <p class="lede">I've led engineering at team, director, and CTO scope, and I'm ready to run an engineering organization.</p>
+    <div class="highlight">
+      <h3>Forta <span class="stat">· Director of Development / CTO</span></h3>
+      <p>I led the nine-engineer team behind Forta as it grew from a laptop prototype to a ~12,000-node network backed by a $23 million a16z raise, owning architecture, technical design reviews, roadmaps, one-on-ones, and performance reviews.</p>
     </div>
-    <div id="panel-technical" class="panel" role="tabpanel" aria-labelledby="tab-technical">
-      <h3 class="panel-title">Technical</h3>
-      <div class="highlight">
-        <h3>Sei Giga <span class="stat">· designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
-        <p>I led the design and prototyping of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and I lead the five-engineer team delivering it incrementally to mainnet.</p>
-      </div>
-      <div class="highlight">
-        <h3>First parallelized EVM</h3>
-        <p>I designed and implemented Block-STM parallel transaction execution for Sei, the first parallelized EVM, with deterministic state-conflict detection and a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
-      </div>
-      <div class="highlight">
-        <h3>Forta <span class="stat">· laptop prototype to ~12,000 nodes, $23M a16z raise</span></h3>
-        <p>As principal architect and technical leader, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
-      </div>
+    <div class="highlight">
+      <h3>Vocalocity / Vonage <span class="stat">· teams of up to 21</span></h3>
+      <p>I was promoted from Software Engineer through Development Manager and Director of Development to Director of Software Architecture, coordinating distributed teams in Atlanta, New Jersey, and Tel Aviv before and after the Vonage acquisition.</p>
     </div>
-    <div id="panel-leadership" class="panel" role="tabpanel" aria-labelledby="tab-leadership">
-      <h3 class="panel-title">Leadership</h3>
-      <div class="highlight">
-        <h3>Forta <span class="stat">· Director of Development / CTO</span></h3>
-        <p>I led the nine-engineer team behind Forta as it grew from a laptop prototype to a ~12,000-node network backed by a $23 million a16z raise, owning architecture, technical design reviews, roadmaps, one-on-ones, and performance reviews.</p>
-      </div>
-      <div class="highlight">
-        <h3>Vocalocity / Vonage <span class="stat">· teams of up to 21</span></h3>
-        <p>I was promoted from Software Engineer through Development Manager and Director of Development to Director of Software Architecture, coordinating distributed teams in Atlanta, New Jersey, and Tel Aviv before and after the Vonage acquisition.</p>
-      </div>
-      <div class="highlight">
-        <h3>Sei Labs <span class="stat">· manager, Consensus &amp; Execution team</span></h3>
-        <p>I manage the five-engineer Consensus &amp; Execution team delivering Sei Giga incrementally to mainnet, combining organization-wide architectural leadership with hands-on implementation.</p>
-      </div>
-      <div class="highlight">
-        <h3>Engineering &amp; business <span class="stat">· MBA</span></h3>
-        <p>An MBA on top of a computer-science foundation. I'm at home where technical strategy meets regulatory, operational, and business constraints.</p>
-      </div>
+    <div class="highlight">
+      <h3>Sei Labs <span class="stat">· manager, Consensus &amp; Execution team</span></h3>
+      <p>I manage the five-engineer Consensus &amp; Execution team delivering Sei Giga incrementally to mainnet, combining organization-wide architectural leadership with hands-on implementation. I also led the transition to agentic, spec-driven development.</p>
+    </div>
+    <div class="highlight">
+      <h3>Engineering &amp; business <span class="stat">· MBA</span></h3>
+      <p>An MBA on top of a computer-science foundation. I'm at home where technical strategy meets regulatory, operational, and business constraints, and at Pindrop I delivered recurring architectural briefings to engineering, sales, and executive audiences.</p>
+    </div>
+  </section>
+
+  <section id="technical">
+    <h2>Technical depth</h2>
+    <p class="lede">I still design and ship the hard parts myself: consensus, execution, security, and systems under adversarial load.</p>
+    <div class="highlight">
+      <h3>Sei Giga <span class="stat">· designed for ~5 gigagas/sec, roughly 200,000 TPS</span></h3>
+      <p>I led the design and prototyping of a multi-proposer blockchain architecture based on a modified Autobahn consensus protocol, and contributed to the published research behind it.</p>
+    </div>
+    <div class="highlight">
+      <h3>First parallelized EVM</h3>
+      <p>I designed and implemented Block-STM parallel transaction execution for Sei, the first parallelized EVM, with deterministic state-conflict detection and a sequential fallback to preserve correctness under pathological conflict and denial-of-service scenarios.</p>
+    </div>
+    <div class="highlight">
+      <h3>Forta <span class="stat">· laptop prototype to ~12,000 nodes</span></h3>
+      <p>As principal architect, I helped grow a decentralized transaction-monitoring and threat-detection network to 900+ detection bots across Ethereum, BNB Smart Chain, Avalanche, Polygon, Arbitrum, and Optimism, serving 13,000+ subscribers.</p>
+    </div>
+    <div class="highlight">
+      <h3>Fraud detection at Pindrop <span class="stat">· toward ~3 billion calls per year</span></h3>
+      <p>I architected fraud-detection and authentication systems used by major banks, including real-time detection, model management, and machine-learning processing pipelines.</p>
+    </div>
+  </section>
+
+  <section id="ai-native">
+    <h2>AI-native engineering</h2>
+    <p class="lede">I led the AI transition at Sei Labs. Agentic development is now my primary way of building software, not an add-on.</p>
+    <div class="highlight">
+      <h3>Spec-driven development</h3>
+      <p>We work at the level of high-level, machine-readable specs: message formats, disaster-recovery and high-availability characteristics, what each component owns and does not own. Custom Claude skills render those specs, generate code from them, and turn spec changes into pull requests.</p>
+    </div>
+    <div class="highlight">
+      <h3>Agents across the lifecycle</h3>
+      <p>I design task-specific workflows around Claude that decompose features, generate and modify production code, run tests, investigate failures, and iterate across the codebase.</p>
+    </div>
+    <div class="highlight">
+      <h3>Knowledge as infrastructure</h3>
+      <p>I encode architecture, coding standards, operational procedures, and domain knowledge in reusable skills, repository-level instructions, and guardrails, backed by automated validation.</p>
+    </div>
+    <div class="highlight">
+      <h3>Accountability stays human</h3>
+      <p>I keep direct ownership of architecture, security, testing, code review, and production deployment.</p>
     </div>
   </section>
 
@@ -238,21 +256,21 @@
       <div class="years">2023–Present</div>
       <div class="what">
         <strong>Sei Labs</strong> <span class="title">· L7 Engineer (Manager), Consensus &amp; Execution</span>
-        <div class="desc">Multi-proposer consensus and parallelized EVM.</div>
+        <div class="desc">Manage the five-engineer team behind multi-proposer consensus and the parallelized EVM; led the transition to agentic, spec-driven development.</div>
       </div>
     </div>
     <div class="role">
       <div class="years">2020–2023</div>
       <div class="what">
         <strong>OpenZeppelin / Forta</strong> <span class="title">· Director of Development / CTO, Forta</span>
-        <div class="desc">Principal architect for the Forta network, which raised $23M from a16z, and the Defender DevSecOps platform.</div>
+        <div class="desc">Led nine engineers as CTO of Forta, which raised $23M from a16z; principal architect for Forta and the Defender DevSecOps platform.</div>
       </div>
     </div>
     <div class="role">
       <div class="years">2019–2020</div>
       <div class="what">
         <strong>Bishop Fox</strong> <span class="title">· Principal Engineer &amp; Software Manager</span>
-        <div class="desc">Continuous attack-surface and vulnerability-detection platform for Fortune 500 customers.</div>
+        <div class="desc">Managed five engineers building a continuous attack-surface and vulnerability-detection platform for Fortune 500 customers.</div>
       </div>
     </div>
     <div class="role">
@@ -266,7 +284,7 @@
       <div class="years">2016–2019</div>
       <div class="what">
         <strong>Pindrop</strong> <span class="title">· Software Architect</span>
-        <div class="desc">Fraud-detection and authentication systems for major banks and enterprise call centers.</div>
+        <div class="desc">Fraud-detection and authentication systems for major banks and enterprise call centers; led the team that launched Cloud Protect.</div>
       </div>
     </div>
     <div class="role">
@@ -316,17 +334,5 @@
 
   <footer>Steven Landers · Milton, Georgia · Remote</footer>
 </main>
-<script>
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs [role="tab"]'));
-  function select(tab) {
-    tabs.forEach(function (t) {
-      var selected = t === tab;
-      t.setAttribute('aria-selected', String(selected));
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
-    });
-  }
-  tabs.forEach(function (t) { t.addEventListener('click', function () { select(t); }); });
-  select(document.getElementById('tab-technical'));
-</script>
 </body>
 </html>
